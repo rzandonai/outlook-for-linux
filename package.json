@@ -1,0 +1,49 @@
+{
+  "name": "outlook-for-linux",
+  "version": "0.0.8",
+  "description": "Unofficial client for Microsoft outlook for Linux",
+  "homepage": "https://github.com/rzandonai/outlook-for-linux",
+  "keywords": [
+    "outlook",
+    "Microsoft outlook"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/rzandonai/outlook-for-linux"
+  },
+  "author": "Ivelin Velkov <ivelin.velkov@gmail.com>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "scripts": {
+    "start": "electron ./app",
+    "start-debug": "WEB_DEBUG=1 electron --disable-http-cache ./app",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "devDependencies": {
+    "electron": "^1.8.4",
+    "electron-builder": "^20.8.2"
+  },
+  "build": {
+    "appId": "outlook-for-linux",
+    "asar": false,
+    "linux": {
+      "category": "Network;Chat",
+      "packageCategory": "net",
+      "executableName": "outlook",
+      "synopsis": "Microsoft outlook for Linux",
+      "description": "Unofficial Microsoft outlook client for Linux using Electron. It uses the Web App\n and wraps it as a standalone application using Electron.",
+      "desktop": {
+        "Name": "Microsoft outlook for Linux",
+        "Comment": "Unofficial client for Microsoft outlook for Linux",
+        "StartupWMClass": "outlook-for-linux"
+      },
+      "target": [
+        "rpm",
+        "deb",
+        "pacman",
+        "tar.gz"
+      ]
+    }
+  },
+  "dependencies": {}
+}

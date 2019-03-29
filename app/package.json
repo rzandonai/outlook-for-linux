@@ -1,0 +1,12 @@
+{
+  "name": "outlook-for-linux",
+  "version": "0.0.1",
+  "description": "Microsoft outlook for Linux",
+  "main": "lib/index.js",
+  "author": "Ricardo Zandonai <zandonai.r@gmail.com>",
+  "dependencies": {
+    "electron-window-state": "~4.1.1",
+    "open": "0.0.5",
+    "yargs": "^11.1.0"
+  }
+}
